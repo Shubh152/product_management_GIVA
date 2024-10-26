@@ -1,6 +1,6 @@
 # Product Management App
 
-An efficient and user-friendly product management platform that enables users to manage their product listings. Sign up or log in to easily add, update, and organize products, including editing details like price, description, and images.
+An efficient and user-friendly product management platform that enables users to manage their product listings. Sign up or log in to easily add, update, and organize products, including editing details like price, description, and quantity.
 
 _Get Started:_ [Product Management App](https://product-management-giva.vercel.app/)
 
@@ -83,6 +83,22 @@ Follow these steps to set up the project locally:
 ```
 
 4. The backend will run on [http://localhost:5000](http://localhost:5000).
+
+## Environment Variables
+the following environment variable have to be setup in the express-api directory for intiailising the backend server.
+```
+DATABASE_URL
+AWS_ENDPOINT
+AWS_ACCESS
+AWS_SECRET
+
+COVER_IMAGE_BUCKET='cover-images'
+JWT_SECRET='giva_admin_secret'
+ADMIN_KEY='adminsecretsignup'
+```
+## Admin Access
+
+Only Authorised Users can edit, add and delete products. To signup as an authorised user you have to setup ADMIN_KEY environment variable and use its value in the signup form. This will create your account in the application. After this, signin using your credentials and you are will have admin priveleges.
 
 ## Live Deployment
 
