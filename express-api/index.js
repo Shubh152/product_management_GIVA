@@ -25,10 +25,11 @@ app.use(cors());
 dotenv.config();
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.listen(PORT, () => {
-  console.log(`server is listening at port:${PORT}`);
-});
-
+if (require.main == module) {
+  app.listen(PORT, () => {
+    console.log(`server is listening at port:${PORT}`);
+  });
+}
 app.post("/signin", async (req, res) => {
   try {
     const userName = req.body.username;
