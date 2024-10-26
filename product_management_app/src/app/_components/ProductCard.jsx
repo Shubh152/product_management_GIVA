@@ -88,7 +88,7 @@ export default function ProductCard({
               color="brand.600"
               fontSize="sm"
               overflowWrap={"normal"}
-              overflowX={"scroll"}
+              overflowY={"scroll"}
             >
               <b>Description :</b>
               <br />
