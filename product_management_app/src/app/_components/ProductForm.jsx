@@ -41,7 +41,7 @@ export default function ProductForm() {
       console.log(token);
       
       const response = await axios.post(
-        `${process.env.BACKEND}/admin/`,
+        `https://product-management-giva.onrender.com/admin/`,
         {
           productName,
           productDescription,

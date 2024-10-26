@@ -10,7 +10,7 @@ export default function ProductMenu() {
 
   useEffect(() => {
     try {
-      axios.get(`${process.env.BACKEND}/`).then((response) => {
+      axios.get(`https://product-management-giva.onrender.com/`).then((response) => {
         const data = response.data;
         setData(data);
         setLoading(false);

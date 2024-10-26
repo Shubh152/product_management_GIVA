@@ -16,7 +16,7 @@ export default function SigninForm() {
   const signinUser = async () => {
     try {
       const response = await axios.post(
-        `${process.env.BACKEND}/signin/`,
+        `https://product-management-giva.onrender.com/signin/`,
         {
           username: userName,
           password: passWord,
@@ -58,7 +58,7 @@ export default function SigninForm() {
   const signupUser = async () => {
     try {
       const response = axios.post(
-        `${process.env.BACKEND}/signup/`,
+        `https://product-management-giva.onrender.com/signup/`,
         {
           username: userName,
           password: passWord,
