@@ -25,9 +25,9 @@ app.use(cors());
 dotenv.config();
 app.use(bodyParser.urlencoded({ extended: false }));
 
-if (require.main == module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   app.listen(PORT, () => {
-    console.log(`server is listening at port:${PORT}`);
+    console.log(`Server is listening at port: ${PORT}`);
   });
 }
 app.post("/signin", async (req, res) => {
