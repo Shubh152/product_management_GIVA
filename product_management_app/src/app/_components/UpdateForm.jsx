@@ -55,7 +55,6 @@ export default function UpdateForm() {
           productQuantity,
         },
         {
-          withCredentials: true,
           headers: {
             Authorization: `Bearer ${window.localStorage.getItem("token")}`,
             "Content-Type": "application/x-www-form-urlencoded",
