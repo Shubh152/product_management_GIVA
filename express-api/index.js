@@ -21,7 +21,7 @@ const PORT = 5000;
 const upload = multer({});
 const saltRounds = 10;
 
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors());
 dotenv.config();
 app.use(bodyParser.urlencoded({ extended: false }));
 
