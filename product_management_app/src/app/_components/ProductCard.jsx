@@ -25,7 +25,7 @@ export default function ProductCard({
   const toast = useToast();
   const deleteProduct = async () => {
     try {
-      const response = await axios.delete(`http://localhost:5000/admin/${id}`, {
+      const response = await axios.delete(`${process.env.BACKEND}/admin/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "application/x-www-form-urlencoded", // for <input type=file> data

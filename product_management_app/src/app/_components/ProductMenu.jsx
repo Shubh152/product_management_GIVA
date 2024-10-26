@@ -10,7 +10,7 @@ export default function ProductMenu() {
 
   useEffect(() => {
     try {
-      axios.get(`http://localhost:5000/`).then((response) => {
+      axios.get(`${process.env.BACKEND}/`).then((response) => {
         const data = response.data;
         setData(data);
         setLoading(false);

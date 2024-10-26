@@ -41,7 +41,7 @@ export default function ProductForm() {
       console.log(token);
       
       const response = await axios.post(
-        "http://localhost:5000/admin/",
+        `${process.env.BACKEND}/admin/`,
         {
           productName,
           productDescription,

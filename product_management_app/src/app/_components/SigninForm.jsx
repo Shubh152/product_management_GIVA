@@ -16,7 +16,7 @@ export default function SigninForm() {
   const signinUser = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/signin",
+        `${process.env.BACKEND}/signin/`,
         {
           username: userName,
           password: passWord,
@@ -56,7 +56,7 @@ export default function SigninForm() {
   const signupUser = async () => {
     try {
       const response = axios.post(
-        "http://localhost:5000/signup",
+        `${process.env.BACKEND}/signup/`,
         {
           username: userName,
           password: passWord,

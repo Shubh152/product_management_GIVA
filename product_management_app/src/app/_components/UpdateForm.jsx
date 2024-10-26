@@ -29,7 +29,7 @@ export default function UpdateForm() {
   const nextRouter = useRouter();
   useEffect(() => {
     try {
-      axios.get(`http://localhost:5000/${productId}`).then((response) => {
+      axios.get(`${process.env.BACKEND}/${productId}`).then((response) => {
         const data = response.data;
         console.log(data);
         setName(data.name);
@@ -46,7 +46,7 @@ export default function UpdateForm() {
   const updateForm = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/admin/${productId}`,
+        `${process.env.BACKEND}:5000/admin/${productId}`,
         {
           productId,
           productName,
