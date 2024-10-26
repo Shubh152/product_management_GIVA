@@ -51,7 +51,7 @@ export default function ProductForm() {
         },
         {
           headers: {
-            "Authorization" : `Bearer ${localStorage.getItem("token")}`,
+            "Authorization" : `Bearer ${window.localStorage.getItem("token")}`,
             "Content-Type": "multipart/form-data", // for <input type=file> data
           },
         }

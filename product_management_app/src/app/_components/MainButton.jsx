@@ -5,13 +5,13 @@ import { useRouter } from "next/navigation";
 export default function MainButton() {
   const nextRouter = useRouter();
   const logoutUser = async () => {
-    localStorage.removeItem("token");
+    window.localStorage.removeItem("token");
     if (location.href == "/") location.reload();
     else nextRouter.push("/");
   };
   return (
     <ButtonGroup spacing={3}>
-      {localStorage.getItem("token") && (
+      {window.localStorage.getItem("token") && (
         <>
           <Button
             colorScheme="brand"
@@ -33,7 +33,7 @@ export default function MainButton() {
           </Button>
         </>
       )}
-      {!localStorage.getItem("token") && (
+      {!window.localStorage.getItem("token") && (
         <Button
           colorScheme="brand"
           variant={"solid"}

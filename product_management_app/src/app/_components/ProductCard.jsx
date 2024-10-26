@@ -27,7 +27,7 @@ export default function ProductCard({
     try {
       const response = await axios.delete(`${process.env.BACKEND}/admin/${id}`, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `Bearer ${window.localStorage.getItem("token")}`,
           "Content-Type": "application/x-www-form-urlencoded", // for <input type=file> data
         },
       });
@@ -94,7 +94,7 @@ export default function ProductCard({
               <br />
               {description}
             </Text>
-            {localStorage.getItem("token") && (
+            {window.localStorage.getItem("token") && (
               <ButtonGroup spacing={3} justifyContent={"center"}>
                 <Button
                   size="xs"
