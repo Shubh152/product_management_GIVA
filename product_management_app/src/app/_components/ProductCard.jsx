@@ -85,10 +85,10 @@ export default function ProductCard({
               </Text>
             </Stack>
             <Text
+              height={"50px"}
               color="brand.600"
               fontSize="sm"
-              overflowWrap={"normal"}
-              overflowY={"scroll"}
+              overflow={"auto"}
             >
               <b>Description :</b>
               <br />
