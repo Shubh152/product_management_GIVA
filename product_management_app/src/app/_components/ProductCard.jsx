@@ -94,7 +94,7 @@ export default function ProductCard({
               <br />
               {description}
             </Text>
-            {window.localStorage.getItem("token") && (
+            {typeof window !== 'undefined' && window.localStorage.getItem("token") && (
               <ButtonGroup spacing={3} justifyContent={"center"}>
                 <Button
                   size="xs"

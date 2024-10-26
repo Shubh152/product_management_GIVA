@@ -28,7 +28,9 @@ export default function SigninForm() {
         }
       );
       if (response.status == 200) {
-        window.localStorage.setItem("token",response.data)
+        if (typeof window !== "undefined") {
+          window.localStorage.setItem("token", response.data);
+        }
         toast({
           position: "top",
           description: "Signin Successfull",
