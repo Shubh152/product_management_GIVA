@@ -46,7 +46,7 @@ export default function UpdateForm() {
   const updateForm = async () => {
     try {
       const response = await axios.put(
-        `https://product-management-giva.onrender.com:5000/admin/${productId}`,
+        `https://product-management-giva.onrender.com/admin/${productId}`,
         {
           productId,
           productName,
