@@ -191,7 +191,7 @@ export default function ProductForm() {
           ) : (
             <HStack>
               {coverImage.map((image) => {
-                return <Img height="200px" src={URL.createObjectURL(image)} />;
+                return <Img key={image.width} height="200px" src={URL.createObjectURL(image)} />;
               })}
             </HStack>
           )}
