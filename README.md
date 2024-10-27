@@ -108,6 +108,12 @@ The platform is currently live and hosted on the following services:
 
 You can visit the links above to interact with the live application and explore its features.
 
+For Admin Access in live deployment, sign in with following:
+username : ADMIN
+password: qwerty
+
+Now you can edit, add or delete products.
+
 ---
 With this guide, you should be up and running in no time. Happy product management!
 
